@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import {
   FETCH_JOKE_REQUEST,
   FETCH_JOKE_SUCCESS,

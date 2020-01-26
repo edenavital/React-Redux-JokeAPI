@@ -3,10 +3,10 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
 
-import reducer from "./joke/jokeReducer";
+import jokeReducer from "./joke/jokeReducer";
 
 const store = createStore(
-  reducer,
+  jokeReducer,
   composeWithDevTools(applyMiddleware(logger, thunk))
 );
 

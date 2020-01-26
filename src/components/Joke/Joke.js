@@ -4,7 +4,7 @@ import { fetchJoke } from "../../redux";
 import "./Joke.css";
 
 //props: ({loading, joke, error})
-function Joke({ joke }) {
+function Joke({ joke, fetchJoke }) {
   useEffect(() => {
     fetchJoke();
   }, []);
