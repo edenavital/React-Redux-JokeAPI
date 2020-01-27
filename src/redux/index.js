@@ -1,1 +1,1 @@
-export * from "./joke/jokeActions";
+export { fetchJoke } from "./joke/jokeActions";

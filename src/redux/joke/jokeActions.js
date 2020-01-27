@@ -32,14 +32,16 @@ export const fetchJoke = () => {
 
     axios
       .get("https://sv443.net/jokeapi/category/Dark?blacklistFlags=nsfw")
-      .then(joke => {
+      .then(res => {
         console.log("fetch success");
+        const joke = res.data;
         console.log(joke);
         dispatch(fetchJokeSuccess(joke));
       })
       .catch(err => {
+        const error = err.message;
         console.log(err);
-        dispatch(fetchJokeFailure(err));
+        dispatch(fetchJokeFailure(error));
       });
   };
 };
